@@ -16,33 +16,44 @@
     <body>
 
    <div class="grid-container">
-    <header>
-        
-         <h1>My App</h1>
+    <header class="header">
+        <div class="header-container">
+         <h1>MyApp</h1>
 
         <div class="bell-icon-container">
             <img src="icons/icon-bell.svg" class="icon-bell" alt="SVG of bell icon"> <!--bell icon-->
             <div class="notification" id="notification-icon">
                 <ul class="notificationMessages"></ul>  
             </div>
-
-        
-        <div class="profile-img">
+         <div class="profile-img">
         <img src="images/avatar.png" class="profile-image" alt="my profile photo"> 
-        <h3 class="myName">Hanane Ladj</h3>
+        <h3>Hanane Ladj</h3>
     </div>
+
     </div>
 </header>
 
 <!-- Sidebare navighation -->
-    <nav class="nav-bare">
-        <a href="#dashboard"><img src="icons/icon-dashboard.svg" alt="icon-dashboard" class="nav-img"></a>
-        <a href="#daily-mobileUsers"><img src="icons/icon-members.svg" alt="members" class="nav-img"></a>
-        <a href="#socialStats"><img src="icons/icon-visits.svg" alt="visits" class="nav-img"></a>
-        <a href="#settings"><img src="icons/icon-settings.svg" alt="settings" class="nav-img"></a>
+    <nav class="navigation">
+        <div class=nav-container>
+            <ul class="nav-icons">
+        <a href="#">
+            <li><img src="icons/icon-dashboard.svg" alt="icon-dashboard" class="nav-img"></li>
+            </a>
+        <a href="#">
+            <li><img src="icons/icon-members.svg" alt="members" class="nav-img"></li>
+        </a>
+        <a href="#">
+            <li><img src="icons/icon-visits.svg" alt="visits" class="nav-img"></li>
+        </a>
+        <a href="#">
+            <li><img src="icons/icon-settings.svg" alt="settings" class="nav-img"></li>
+        </a>
+            </ul>
+        </div>
     </nav>
 
-    <main>
+    <main class="main">
         <section id="dashboard">
             <div class="dashSearch">
                 <h2 class="headline">Dashboard</h2> <!-- Grid row -->
@@ -220,6 +231,7 @@
                 </form>
             </section>
 
+            <!-- new activities widget -->
             <section class="activity">
                 <h3>Recent Activity</h3>
                 <div class="activity-container">

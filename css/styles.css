@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 
+
+
+/* Grid countainer styling */
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -11,9 +14,41 @@
     "navigation"
     "main";
     }
+
+    /* Header styling */
     .header {
-    grid-area: header;
+        padding: 0px 5px;
+        grid-area: header;
+        color: #fff;
+        background-color: #78377a;
+    } 
+
+    .header-container{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        height: 100%;
+        cursor: pointer;
+        font-size: 13px;
     }
+   
+
+    /* Bell icon styling */
+    .bell-icon-container {
+    
+       position: relative;
+       cursor: pointer;
+       width: 30px;
+       padding-top: 10px;
+      }
+
+    .profile-image {
+        width: 30px;
+        border-radius: 50%;
+    }
+
+   
+
     .navigation {
     grid-area: navigation;
     }
@@ -22,7 +57,8 @@
     grid-area: main;
     }
     
-    @media (min-width: 768px) {
+    
+   /* @media (min-width: 768px) {
         .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas:
@@ -68,5 +104,5 @@
                         
                                 width: 45vw;
                             }
-                            }
+                            } */
                             
