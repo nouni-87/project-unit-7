@@ -30,35 +30,130 @@
         height: 100%;
         cursor: pointer;
         font-size: 13px;
+        align-items: center;
     }
    
 
-    /* Bell icon styling */
-    .bell-icon-container {
-    
-       position: relative;
+    /* Bell icon and profile image styling */
+    .icon-bell {
        cursor: pointer;
        width: 30px;
-       padding-top: 10px;
+       
+    }
+
+    .bell-icon-container {
+        display: flex;
+        padding-top: 10px;
       }
+
+    .user-account {
+        display: flex;
+        align-items: center;
+    }
 
     .profile-image {
         width: 30px;
         border-radius: 50%;
+        margin-right: 15px;
     }
-
    
-
+/* Styling side bare navigations */
     .navigation {
-    grid-area: navigation;
+        display: flex;
+        grid-area: navigation;
+        background-color: blueviolet;
     }
+
+    .nav-imgIcon {
+        margin-top: 15px;
+        margin-bottom: 15px;
+       
+    }
+
+    .nav-icons {
+        width: 30px;
+        height: 30px;
+        padding-left: 5px;
+        margin-top: 15px;
+        margin-left: 10px;
+     }
+
+/* styling dashboard and seachbox */
+
+.main-header {
+    
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    }
+
+    .headline {
+       
+         width: 100%;
+         height: 60px;
+         margin: 0;
+         z-index: 10;
+         padding: 20px 65px 20px 20px;
+     }
+
+     .main-header-search {
+         display: flex;
+         margin: 15px;
+         justify-content: space-between;
+         background: rgb(241, 232, 232);
+         width: 100%;
+         height: 60px;
+         margin: 0;
+         z-index: 10;
+         padding: 20px 65px 20px 20px;
+         
+     }
+
+    
+    .searchBar1 {
+        
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    /* Styling Alert */
+
+    /* Styling Traffic Header and line Graph */
+    
+    .traffic-header {
+        display: flex;
+       flex-direction: column;
+      }
+       .traffic-header h3 {
+           text-align: left;
+           width: 100%;
+           height: 60px;
+           margin: 0;
+           z-index: 10;
+           padding: 20px 65px 20px 20px;
+       }
+        .traffic-nav {
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+        }
+      .traffic-nav-link {
+          
+        margin-right: 15px;
+        margin-left: 15px;
+      }
+
+     
+
+    
     .main {
     
     grid-area: main;
     }
     
     
-   /* @media (min-width: 768px) {
+   @media (min-width: 768px) {
         .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-areas:
@@ -66,7 +161,7 @@
         "navigation main";
         }
         }
-        
+        /*
         .main {
             display: grid;
             }

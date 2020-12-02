@@ -11,7 +11,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" 
         integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" 
         crossorigin="anonymous"></script>
-        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     </head>
     <body>
 
@@ -25,7 +25,7 @@
             <div class="notification" id="notification-icon">
                 <ul class="notificationMessages"></ul>  
             </div>
-         <div class="profile-img">
+         <div class="user-account">
         <img src="images/avatar.png" class="profile-image" alt="my profile photo"> 
         <h3>Hanane Ladj</h3>
     </div>
@@ -35,27 +35,27 @@
 
 <!-- Sidebare navighation -->
     <nav class="navigation">
-        <div class=nav-container>
-            <ul class="nav-icons">
+        <div class="nav-icons">
+            
         <a href="#">
-            <li><img src="icons/icon-dashboard.svg" alt="icon-dashboard" class="nav-img"></li>
+            <img src="icons/icon-dashboard.svg" alt="dashboard-icon" class="nav-imgIcon">
             </a>
         <a href="#">
-            <li><img src="icons/icon-members.svg" alt="members" class="nav-img"></li>
+            <img src="icons/icon-members.svg" alt="members-icon" class="nav-imgIcon">
         </a>
         <a href="#">
-            <li><img src="icons/icon-visits.svg" alt="visits" class="nav-img"></li>
+            <img src="icons/icon-visits.svg" alt="visits-icon" class="nav-imgIcon">
         </a>
         <a href="#">
-            <li><img src="icons/icon-settings.svg" alt="settings" class="nav-img"></li>
+            <img src="icons/icon-settings.svg" alt="settings-icon" class="nav-imgicon">
         </a>
-            </ul>
+            
         </div>
     </nav>
 
     <main class="main">
-        <section id="dashboard">
-            <div class="dashSearch">
+        
+            <div class="main-header">
                 <h2 class="headline">Dashboard</h2> <!-- Grid row -->
                 <div class="main-header-search">
                     <input type="search" placeholder="Search..." class="searchBar1"/>
@@ -68,7 +68,7 @@
 
         <!-- JS will insert alert here -->
         </div>  
-        </section>
+        
 
         <!-- line graph charts -->
         <section class="traffic">
