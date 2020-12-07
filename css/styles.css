@@ -3,17 +3,22 @@
 }
 
 
+/* Mobile first approach 
 
 /* Grid countainer styling */
 .grid-container {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px 1fr;
     grid-template-areas:
     "header"
     "navigation"
     "main";
     }
+
+    .main {
+        grid-area: main;
+     }
 
     /* Header styling */
     .header {
@@ -51,7 +56,7 @@
         align-items: center;
     }
 
-    .profile-image {
+    .profile-img {
         width: 30px;
         border-radius: 50%;
         margin-right: 15px;
@@ -62,20 +67,27 @@
         display: flex;
         grid-area: navigation;
         background-color: blueviolet;
-    }
-
-    .nav-imgIcon {
-        margin-top: 15px;
-        margin-bottom: 15px;
+        width: 100%;
        
     }
 
+    .nav-imgIcon {
+       margin-bottom: 15px;
+        width: 40px;
+        height: 50px;
+        padding: 10px;
+      
+    }
+
     .nav-icons {
-        width: 30px;
+        display: flex;
+        margin: 0 auto;
+      
+        /*width: 30px;
         height: 30px;
         padding-left: 5px;
         margin-top: 15px;
-        margin-left: 10px;
+        margin-left: 10px;*/
      }
 
 /* styling dashboard and seachbox */
@@ -88,9 +100,7 @@
     }
 
     .headline {
-       
-         width: 100%;
-         height: 60px;
+         height: 70px;
          margin: 0;
          z-index: 10;
          padding: 20px 65px 20px 20px;
@@ -98,23 +108,25 @@
 
      .main-header-search {
          display: flex;
-         margin: 15px;
+         
          justify-content: space-between;
          background: rgb(241, 232, 232);
          width: 100%;
          height: 60px;
          margin: 0;
          z-index: 10;
-         padding: 20px 65px 20px 20px;
+         padding: 5px;
          
      }
 
     
     .searchBar1 {
-        
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
+        margin: 5px 0 5px 150px;
+        border: solid 2px rgb(19, 18, 18);
+        border-radius: 5px;
+        width: 75%;
+        padding: 15px 10px;
+     
     }
 
     /* Styling Alert */
@@ -123,9 +135,18 @@
     
     .traffic-header {
         display: flex;
-       flex-direction: column;
+    }
+
+      canvas {
+          max-width: 100%;
       }
-       .traffic-header h3 {
+       .traffic-header h3,
+       .daily h3,
+       .mobile h3,
+       .members h3,
+       .message h3,
+       .activity h3,
+       .settings h3 {
            text-align: left;
            width: 100%;
            height: 60px;
@@ -133,25 +154,185 @@
            z-index: 10;
            padding: 20px 65px 20px 20px;
        }
+       .media-stats {
+        padding: 10px 65px 0 20px;
+       }
+
         .traffic-nav {
             display: flex;
             flex-direction: row;
             align-self: center;
+            
         }
       .traffic-nav-link {
-          
+        transition: background-color .2s ease-in-out, color .2s ease-in-out;
         margin-right: 15px;
         margin-left: 15px;
+       
       }
 
+      .traffic-nav-link:hover {
+        color: #fff;
+        background-color: #58e1c1;
+        transition: background-color .2s ease-in-out, color .2s ease-in-out;
+        cursor: pointer;
+    }
      
+    .widget-container-full {
+        margin-top:15px;
+        padding-top: 5px;
+        height: 80%;
+    }
 
+    .daily,
+    .mobile {
+        border: solid 2px rgb(180, 173, 173); 
+    }
+
+     .daily {
+         margin-top: 15px;
+         margin-bottom: 15px;
+     }
+
+       
+     .social-media {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding: 10px;
+         gap: 10px;
+        
+     }
     
-    .main {
-    
-    grid-area: main;
+     .social-container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+         background-color:rgb(185, 197, 185);
+         border-radius: 5px;
+         border: solid 2px rgb(28, 151, 55); 
+     }
+
+        .twit-svg,
+        .fb-svg,
+        .go-svg {
+            fill: purple;
+            
+            background-color: turquoise;
+            border-radius: 50%;
+            height: 50px;
+            width: 60px;
+        }
+        
+
+   .social-image {
+       padding-right: 10px;
+       
+   }
+
+   .members,
+   .activity {
+       display: flex;
+       flex-direction: column;
+       
+   }
+
+   .members-container,
+   .activity-container {
+       display: flex;
+       margin: 5px 10px;
+       padding: 10px;
+       padding-bottom: 20px;
+       gap: 15px;
+       border-bottom: 1px solid rgb(27, 26, 26);
+   }
+   
+   .profile-image {
+        width: 60px;
+        border-radius: 50%;
+        margin: 15px;
+   }
+   
+   .members-container > p {
+        text-align: right;
+        flex-grow: 1;
+    }
+   
+
+    form {
+        width: 100%;
+        padding: 0 1em;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid rgb(27, 26, 26);
     }
     
+    input[type=text] {
+        background-color: #e8eeef;
+        border: none;
+        border-radius: .10em;
+        height:50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+       
+    }
+
+    textarea {
+        background-color: #e8eeef;
+        border: none;
+        border-radius: .10em;
+        height: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .button-primary,
+    .button-disabled {
+        background-color: rebeccapurple;
+        color: #fff;
+        border: none;
+        height: 50px;
+        width: 100%;
+        border-radius: 0.10em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .settings {
+        display: flex;
+        flex-direction: column;
+        background-color: #e8eeef;
+        border: none;
+        border-radius: .10em;
+        height: 50px;
+        margin: 15px;
+    }
+
+    .setting-not {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+       
+    }
+
+    .settings-button {
+        display: flex;
+        gap: 15px;
+    }
+
+    .form-field {
+        background-color: #e8eeef;
+        border: none;
+        border-radius: .10em;
+        height:100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     
    @media (min-width: 768px) {
         .grid-container {
@@ -160,9 +341,31 @@
         "header header"
         "navigation main";
         }
-        }
-        /*
+
         .main {
+            display: grid;
+            }
+
+            .navigation {
+                display: flex;
+                height: 100%;
+                padding-top: 25px;
+                flex-direction: column;
+                
+            }
+            .nav-imgIcon {
+                display: flex;
+                flex-direction: column;
+                
+            }
+
+            
+        }
+      
+        
+            /*
+
+            .main {
             display: grid;
             }
             @media (min-width: 768px) {
@@ -170,22 +373,23 @@
             grid-template-columns: 50% ;
             }
             }
-       
-            @media (min-width: 768px) {
+        
+            /*@media (min-width: 768px) {
                 .traffic, .social {
                 grid-column: 1 / span 2;
                 }
+                } 
+
+            @media (min-width: 768px) {
+                .daily, .members, .message {
+                grid-column: 1 / span 1;
                 }
-                @media (min-width: 768px) {
-                    .daily, .members, .message {
-                    grid-column: 1 / span 1;
+                 }
+            @media (min-width: 768px) {
+                .mobile, .activity, .settings {
+                    grid-column: 2 / span 1;
+                }
                     }
-                    }
-                    @media (min-width: 768px) {
-                        .mobile, .activity, .settings {
-                        grid-column: 2 / span 1;
-                        }
-                        }
 
 
                         .widget-container-full, .widget-container-half {

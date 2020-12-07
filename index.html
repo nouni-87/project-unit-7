@@ -26,7 +26,7 @@
                 <ul class="notificationMessages"></ul>  
             </div>
          <div class="user-account">
-        <img src="images/avatar.png" class="profile-image" alt="my profile photo"> 
+        <img src="images/avatar.png" class="profile-img" alt="my profile photo"> 
         <h3>Hanane Ladj</h3>
     </div>
 
@@ -36,21 +36,18 @@
 <!-- Sidebare navighation -->
     <nav class="navigation">
         <div class="nav-icons">
+        <img class="nav-imgIcon" src="icons/icon-dashboard.svg" alt="dashboard-icon">
             
-        <a href="#">
-            <img src="icons/icon-dashboard.svg" alt="dashboard-icon" class="nav-imgIcon">
-            </a>
-        <a href="#">
-            <img src="icons/icon-members.svg" alt="members-icon" class="nav-imgIcon">
-        </a>
-        <a href="#">
-            <img src="icons/icon-visits.svg" alt="visits-icon" class="nav-imgIcon">
-        </a>
-        <a href="#">
-            <img src="icons/icon-settings.svg" alt="settings-icon" class="nav-imgicon">
-        </a>
+       
+        <img class="nav-imgIcon" src="icons/icon-members.svg" alt="members-icon">
+       
+        
+        <img class="nav-imgIcon" src="icons/icon-visits.svg" alt="visits-icon">
+       
+        
+        <img class="nav-imgIcon" src="icons/icon-settings.svg" alt="settings-icon">
+    </div>
             
-        </div>
     </nav>
 
     <main class="main">
@@ -89,18 +86,29 @@
 
 <!-- bar graph -->
         <section class="daily">
-        <h3>Daily Traffic</h3>
+        <h3>DAILY TRAFFIC</h3>
         <div class="widget-container-half">
         <!-- element bar graph will attach to -->
             <canvas id="daily-chart"></canvas>
         </div>
         </section>
-    
-        <div class="social-container">
-            <div class="social-image">
+
+        <section class="mobile">
+            <h3>MOBILE USERS</h3>
+            <div class="widget-container-half">
+                <!-- element bar graph will attach to -->
+                    <canvas id="mobile-chart"></canvas>
+                </div>
+
+        </section>
+
+        <h3 class="media-stats">SOCIAL STATS</h3>
+        <section class="social-media">
+            <div class="social-container">
+                <div class="social-image">
                 <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                <svg version="1.1" 
+                <svg class="twit-svg" version="1.1" 
                 id="Layer_1" 
                 xmlns="http://www.w3.org/2000/svg" 
                 xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -108,11 +116,12 @@
                      viewBox="0 0 32 32" 
                      style="enable-background:new 0 0 32 32;" 
                      xml:space="preserve">
-                <path fill="red" d="M32,3.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.8,0.8,24,0,22.2,0
+                <path  d="M32,3.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.8,0.8,24,0,22.2,0
                     c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,7.8,5.5,5.2,2.2,1.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5
                     c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1
                     c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1c2.9,1.9,6.4,3,10.1,3c12.1,0,18.7-10,18.7-18.7
                     c0-0.3,0-0.6,0-0.8C30,5.6,31.1,4.4,32,3.1z"/>
+                
                 </svg>
             </div>
             <div class="social-text">
@@ -124,7 +133,7 @@
             <div class="social-container">
                 <div class="social-image">
             <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-            <svg enable-background="new 0 0 56.693 56.693" 
+            <svg class="fb-svg" enable-background="new 0 0 56.693 56.693" 
             height="56.693px" 
             id="Layer_1" 
             version="1.1" 
@@ -133,7 +142,7 @@
             xml:space="preserve" 
             xmlns="http://www.w3.org/2000/svg" 
             xmlns:xlink="http://www.w3.org/1999/xlink">
-            <path fill="green" d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
+            <path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/>
             </svg>
             <!-- add two more social containers and child
             elements for other social media items -->
@@ -148,7 +157,7 @@
         <div class="social-image">
             <?xml version="1.0" encoding="utf-8"?>
                 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                <svg version="1.1" 
+                <svg  class="go-svg" version="1.1" 
                 id="Layer_1" 
                 xmlns="http://www.w3.org/2000/svg" 
                 xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -156,7 +165,7 @@
                     viewBox="0 0 32 32" 
                     style="enable-background:new 0 0 32 32;" 
                     xml:space="preserve">
-                <path fill="blue" d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
+                <path d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
                 c-0.1-0.2-0.3-0.3-0.5-0.6c-0.2-0.2-0.4-0.4-0.5-0.5c-0.1-0.1-0.3-0.3-0.6-0.5c-0.3-0.2-0.5-0.4-0.6-0.4s-0.3-0.2-0.6-0.4
                 c-0.3-0.2-0.5-0.4-0.6-0.4c-0.2,0-0.5,0-1,0c-0.7,0-1.4,0-2,0.1c-0.7,0.1-1.4,0.2-2.1,0.5c-0.7,0.2-1.3,0.5-1.9,0.9s-1,0.8-1.3,1.4
                 c-0.3,0.6-0.5,1.3-0.5,2.1c0,0.9,0.2,1.7,0.7,2.3c0.5,0.7,1.1,1.2,1.8,1.6s1.5,0.7,2.3,0.9s1.6,0.3,2.4,0.3c0.8,0,1.5-0.1,2.2-0.2
@@ -180,56 +189,52 @@
             </div>
 
                 </div>
-
+            </section>
 <!-- new members widget -->
-
+      
         <section class="members">
-            <h3>New Members</h3>
+            <h3>NEW MEMBERS</h3>
 
             <div class="members-container">
                 <img src="images/member-1.jpg" class="profile-image">
+
             <div class="members-text">
-            <p>Victoria Chambers</p>
-            <a href="#">victoria.chambers80@example.com</a>
+                <p>Victoria Chambers</p>
+                <a href="#">victoria.chambers80@example.com</a>
             </div>
             <p>10/15/15</p>
+        </div>
 
             <div class="members-container">
                 <img src="images/member-2.jpg" class="profile-image">
+
             <div class="members-text">
-            <p>Dale Byrd</p>
-            <a href="#">dale.byrd52@example.com</a>
+                <p>Dale Byrd</p>
+                <a href="#">dale.byrd52@example.com</a>
             </div>
             <p>10/15/15</p>
+        </div>
 
             <div class="members-container">
                 <img src="images/member-3.jpg" class="profile-image">
+
             <div class="members-text">
             <p>Dawn Wood</p>
             <a href="#">dawn.wood16@example.com</a>
             </div>
             <p>10/15/15</p>
+        </div>
 
             <div class="members-container">
                 <img src="images/member-4.jpg" class="profile-image">
+
             <div class="members-text">
             <p>Dan Oliver</p>
             <a href="#">dan.oliver82@example.com</a>
             </div>
             <p>10/15/15</p>
+            </div>
         </section>
-
-     <!-- messaging widget -->
-            <section class="message">
-                <h3>Message User</h3>
-                <form class="widget-container">
-                <input type="text" placeholder="Search for user"
-                class="form-field" id="userField">
-                <textarea placeholder="Message for user" class="form-area"
-                id= "messageField" ></textarea>
-                <button class="button-primary" id="send" >Send</button>
-                </form>
-            </section>
 
             <!-- new activities widget -->
             <section class="activity">
@@ -240,12 +245,14 @@
                 <p>Victoria Chambers commented on YourApp's Tips</p>
                 <p>4 hours ago</p>>
                 </div>
+                </div>
     
                 <div class="activity-container">
                     <img src="images/member-2.jpg" class="profile-image">
                 <div class="activity-text">
                 <p>Dale Byrd like the post Facebook's Changes for 2016</p>
                 <p>5 hours ago</p>
+                </div>
                 </div>
                 
                 <div class="activity-container">
@@ -254,6 +261,7 @@
                 <p>Dawn Wood commented onFacebook's Change for 2016</p>
                 <p>5 hours ago</p>
                 </div>
+                </div>
     
                 <div class="activity-container">
                     <img src="images/member-4.jpg" class="profile-image">
@@ -261,7 +269,18 @@
                 <p>Dan Oliver posted YourApp's SEO Tips</p>
                 <p>1 day ago</p>
                 </div>
+                </div>
                 
+            </section>
+
+             <!-- messaging widget -->
+             <section class="message">
+                <h3>MESSAGE USERS</h3>
+                <form class="widget-container">
+                <input type="text" id="userField" placeholder="Search for user" class="form-field">
+                <textarea id="messageField" placeholder="Message for user" class="form-area"></textarea>
+                <button class="button-primary" id="send" >Send</button>
+             </form>
             </section>
 
             <!-- local settings widget -->

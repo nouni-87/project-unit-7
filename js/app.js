@@ -1,3 +1,4 @@
+const trafficCanvas = document.getElementById("traffic-chart");
 const alertBanner = document.getElementById("alert");
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-chart");
