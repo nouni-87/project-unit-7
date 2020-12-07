@@ -5,7 +5,7 @@
 
 /* Mobile first approach 
 
-/* Grid countainer styling */
+/*  Styling Grid countainer */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -20,7 +20,7 @@
         grid-area: main;
      }
 
-    /* Header styling */
+ /* Styling Header  */
     .header {
         padding: 0px 5px;
         grid-area: header;
@@ -39,7 +39,7 @@
     }
    
 
-    /* Bell icon and profile image styling */
+/* Styling Bell icon and profile image */
     .icon-bell {
        cursor: pointer;
        width: 30px;
@@ -65,32 +65,21 @@
 /* Styling side bare navigations */
     .navigation {
         display: flex;
+        justify-content: space-evenly;
         grid-area: navigation;
         background-color: blueviolet;
-        width: 100%;
        
     }
 
     .nav-imgIcon {
-       margin-bottom: 15px;
-        width: 40px;
+        width: 50px;
         height: 50px;
         padding: 10px;
-      
     }
 
-    .nav-icons {
-        display: flex;
-        margin: 0 auto;
-      
-        /*width: 30px;
-        height: 30px;
-        padding-left: 5px;
-        margin-top: 15px;
-        margin-left: 10px;*/
-     }
 
-/* styling dashboard and seachbox */
+
+/* Styling dashboard and seachbox */
 
 .main-header {
     
@@ -345,18 +334,18 @@
         .main {
             display: grid;
             }
+            
 
             .navigation {
                 display: flex;
                 height: 100%;
-                padding-top: 25px;
+               
                 flex-direction: column;
                 
             }
-            .nav-imgIcon {
-                display: flex;
-                flex-direction: column;
-                
+           .nav-imgIcon {
+               
+
             }
 
             
@@ -403,5 +392,6 @@
                         
                                 width: 45vw;
                             }
-                            } */
+                            
+                        }  */ 
                             
