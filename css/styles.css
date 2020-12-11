@@ -22,8 +22,8 @@
 
  /* Styling Header  */
     .header {
-        padding: 0px 5px;
         grid-area: header;
+        padding: 0px 5px;
         color: #fff;
         background-color: #78377a;
     } 
@@ -64,11 +64,10 @@
    
 /* Styling side bare navigations */
     .navigation {
+        grid-area: navigation;
         display: flex;
         justify-content: space-evenly;
-        grid-area: navigation;
         background-color: blueviolet;
-       
     }
 
     .nav-imgIcon {
@@ -81,92 +80,94 @@
 
 /* Styling dashboard and seachbox */
 
-.main-header {
-    
-    display: flex;
-    justify-content: space-between;
-    border: none;
-    }
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        }
 
     .headline {
-         height: 70px;
-         margin: 0;
-         z-index: 10;
-         padding: 20px 65px 20px 20px;
-     }
+        height: 70px;
+        margin: 0;
+        z-index: 10;
+        padding: 20px 65px 20px 20px;
+        }
+        
+    .main-header-search {
+        display: flex;
+        justify-content: space-between;
+        background: rgb(241, 232, 232);
+        width: 100%;
+        height: 60px;
+        margin: 0;
+        z-index: 10;
+        padding: 5px;
+            
+        }
 
-     .main-header-search {
-         display: flex;
-         
-         justify-content: space-between;
-         background: rgb(241, 232, 232);
-         width: 100%;
-         height: 60px;
-         margin: 0;
-         z-index: 10;
-         padding: 5px;
-         
-     }
-
-    
+        
     .searchBar1 {
         margin: 5px 0 5px 150px;
         border: solid 2px rgb(19, 18, 18);
         border-radius: 5px;
         width: 75%;
         padding: 15px 10px;
-     
-    }
+        
+        }
 
-    /* Styling Alert */
+        /* Styling Alert */
 
-    /* Styling Traffic Header and line Graph */
-    
+        /* Styling Traffic Header and line Graph */
+        
     .traffic-header {
         display: flex;
     }
 
-      canvas {
-          max-width: 100%;
-      }
-       .traffic-header h3,
-       .daily h3,
-       .mobile h3,
-       .members h3,
-       .message h3,
-       .activity h3,
-       .settings h3 {
-           text-align: left;
-           width: 100%;
-           height: 60px;
-           margin: 0;
-           z-index: 10;
-           padding: 20px 65px 20px 20px;
-       }
-       .media-stats {
-        padding: 10px 65px 0 20px;
-       }
+    canvas {
+            max-width: 100%;
+    }
 
-        .traffic-nav {
-            display: flex;
-            flex-direction: row;
-            align-self: center;
-            
+    .traffic-header h3,
+    .daily h3,
+    .mobile h3,
+    .members h3,
+    .message h3,
+    .activity h3,
+    .settings h3 {
+        text-align: left;
+        width: 100%;
+        height: 60px;
+        margin: 0;
+        z-index: 10;
+        padding: 20px 65px 20px 20px;
+
+    }
+
+    .media-stats {
+    padding: 10px 65px 0 20px;
+    }
+
+    .traffic-nav {
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        
         }
-      .traffic-nav-link {
+
+    .traffic-nav-link {
         transition: background-color .2s ease-in-out, color .2s ease-in-out;
         margin-right: 15px;
         margin-left: 15px;
-       
-      }
+        
+        }
 
-      .traffic-nav-link:hover {
+    .traffic-nav-link:hover {
         color: #fff;
         background-color: #58e1c1;
         transition: background-color .2s ease-in-out, color .2s ease-in-out;
         cursor: pointer;
     }
-     
+        
     .widget-container-full {
         margin-top:15px;
         padding-top: 5px;
@@ -236,6 +237,7 @@
        padding-bottom: 20px;
        gap: 15px;
        border-bottom: 1px solid rgb(27, 26, 26);
+       
    }
    
    .profile-image {
@@ -294,7 +296,6 @@
     .settings {
         display: flex;
         flex-direction: column;
-        background-color: #e8eeef;
         border: none;
         border-radius: .10em;
         height: 50px;
@@ -322,76 +323,103 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
+
+
+
+
     
    @media (min-width: 768px) {
         .grid-container {
-        grid-template-columns: 55px 1fr;
-        grid-template-areas:
-        "header header"
-        "navigation main";
+            grid-template-columns: 55px 1fr;
+            grid-template-rows: min-content min-content;
+            grid-template-areas:
+            "header header"
+            "navigation main";
         }
 
-        .main {
-            display: grid;
-            }
-            
+           
 
-            .navigation {
-                display: flex;
-                height: 100%;
-               
-                flex-direction: column;
-                
-            }
-           .nav-imgIcon {
-               
-
-            }
-
-            
+        .navigation {
+            display: flex;
+            justify-content: flex-start;
+            height: 100%;
+            flex-direction: column;
         }
+
+           
+
+        .social-media {
+            flex-direction: row;
+            justify-content: space-evenly;
+        } 
+        
+      .tablet-view {
+          display: flex;
+        
+      }
+      .tablet-view > section {
+          flex-basis: 50%;
+      }
+
+      .mobile {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        }
+
+        .members,
+        .activity {
+        width: 50%;
+       justify-content: space-between;
       
-        
-            /*
+   }
 
-            .main {
+
+   
+        /*.main {
             display: grid;
-            }
-            @media (min-width: 768px) {
-            .main {
-            grid-template-columns: 50% ;
-            }
-            }
+
+
+        } 
         
-            /*@media (min-width: 768px) {
-                .traffic, .social {
-                grid-column: 1 / span 2;
-                }
-                } 
+        
 
-            @media (min-width: 768px) {
-                .daily, .members, .message {
-                grid-column: 1 / span 1;
-                }
-                 }
-            @media (min-width: 768px) {
-                .mobile, .activity, .settings {
-                    grid-column: 2 / span 1;
-                }
-                    }
+        
+        .traffic, .social {
+            grid-column: 1 / span 2;
+            flex-basis: 50%;
+        }
 
+        
+        
+        .main {
+            grid-template-columns: 50% ;
+        }
 
-                        .widget-container-full, .widget-container-half {
-                            width: 95vw;
-                            }
-                            @media (min-width: 768px) {
-                            .widget-container-full {
-                            width: 90vw;
-                            }
-                            .widget-container-half {
-                        
-                                width: 45vw;
-                            }
-                            
-                        }  */ 
-                            
+        .traffic, .social {
+            grid-column: 1 / span 2;
+        }
+
+        .daily, .members, .message {
+            grid-column: 1 / span 1;
+        }
+
+        .mobile, .activity, .settings {
+            grid-column: 2 / span 1;
+        }
+
+        .widget-container-full, .widget-container-half {
+             width: 95vw;
+         }
+        
+         .widget-container-full {
+            width: 90vw;
+            }
+            .widget-container-half {
+                width: 45vw;
+          }*/
+
+    }
+        
+        
+           
