@@ -61,12 +61,12 @@
         <!-- line graph charts -->
         <section class="traffic">
             <div class="traffic-header">
-            <h3>Traffic</h3>
-            <ul class="traffic-nav">
-                <li class="traffic-nav-link">Hourly</li>
-                <li class="traffic-nav-link">Daily</li>
-                <li class="traffic-nav-link active">Weekly</li>
-                <li class="traffic-nav-link">Monthly</li>
+            <h3>TRAFFIC</h3>
+            <ul id="traffic-nav-btns" class="traffic-nav">
+                <li id="hourly-btn" class="traffic-nav-link">Hourly</li>
+                <li id="daily-btn" class="traffic-nav-link">Daily</li>
+                <li id="weekly-btn" class="traffic-nav-link active">Weekly</li>
+                <li id="monthly-btn" class="traffic-nav-link">Monthly</li>
             </ul>
             </div>
             <div class="widget-container-full">
@@ -184,7 +184,7 @@
                 </div>
             </section>
 <!-- new members widget -->
-   <div class="tablet-view">
+   <div class="desktop-view">
         <section class="members">
             <h3>NEW MEMBERS</h3>
 
@@ -231,43 +231,43 @@
 
             <!-- new activities widget -->
             <section class="activity">
-                <h3>Recent Activity</h3>
+                <h3>RECENT ACTIVITY</h3>
                 <div class="activity-container">
                     <img src="images/member-1.jpg" class="profile-image">
                 <div class="activity-text">
                 <p>Victoria Chambers commented on YourApp's Tips</p>
-                <p>4 hours ago</p>>
                 </div>
+                <p>4 hours ago</p>>
                 </div>
     
                 <div class="activity-container">
                     <img src="images/member-3.jpg" class="profile-image">
-                    <div class="activity-text">
+                <div class="activity-text">
                     <p>Dawn Wood commented onFacebook's Change for 2016</p>
+                </div>
                     <p>5 hours ago</p>
-                    </div>
-                    </div>
+                </div>
                 
                 <div class="activity-container">
                     <img src="images/member-3.jpg" class="profile-image">
                 <div class="activity-text">
-                <p>Dawn Wood commented onFacebook's Change for 2016</p>
-                <p>5 hours ago</p>
+                        <p>Dawn Wood commented onFacebook's Change for 2016</p>
                 </div>
+                    <p>5 hours ago</p>
                 </div>
     
                 <div class="activity-container">
                     <img src="images/member-4.jpg" class="profile-image">
                 <div class="activity-text">
                 <p>Dan Oliver posted YourApp's SEO Tips</p>
-                <p>1 day ago</p>
                 </div>
+                <p>1 day ago</p>
                 </div>
                 
             </section>
         </div>
              <!-- messaging widget -->
-          <div class="tablet-view">
+          <div class="desktop-view">
              <section class="message">
                 <h3>MESSAGE USERS</h3>
                 <form class="widget-container">
@@ -277,34 +277,26 @@
              </form>
             </section>
 
-            <!-- local settings widget -->
-            <div class="setting-widjet">
-                <section class="settings">
-                    <h3>Settings</h3>
-                    <!-- custom CSS toggle code-->
-                    <div class="setting-not">
-                        <p>Send Email Notifications</p>
-                        <label class="switch-light switch-candy" onclick="">
-                            <input type="checkbox" id="email-not">
-                            <span>
-                                <span>Off</span>
-                                <span>On</span>
-                                <a></a>
-                              </span>
-                            </label>
-                    </div>
-                    <!-- custom CSS toggle code-->
-                    <div class="setting-not">
-                        <p>Set Profile to Public</p>
-                        <label class="switch-light switch-candy" onclick="">
-                            <input type="checkbox" id="public-profile">
-                            <span>
-                                <span>Off</span>
-                                <span>On</span>
-                                <a></a>
-                              </span>
-                            </label>
-                    </div>
+    <!-- local settings widget -->
+    <div class="setting-widjet">
+        <section class="settings">
+            <h3>SETTINGS</h3>
+            <!-- custom CSS toggle code-->
+            <div class="setting-not">
+                <p>Send Email Notifications</p>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <!-- custom CSS toggle code-->
+            <div class="setting-not">
+                <p>Set Profile to Public</p>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
 
                     <select class="form-field" id="timezone">
                     <option disabled selected>Select a Timezone</option>
