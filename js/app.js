@@ -3,9 +3,6 @@ const alertBanner = document.getElementById("alert");
 const bellIcon = document.getElementById("notification-icon");
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-chart");
-const user = document.getElementById("userField");
-const message = document.getElementById("messageField");
-const send = document.getElementById("send");
 
 //ALERT NOTIFICATION
 // Create the html for the banner
@@ -221,6 +218,10 @@ alertBanner.addEventListener('click', e => {
 
 // Messaging Section
 
+    const user = document.getElementById("userField");
+    const message = document.getElementById("messageField");
+    const send = document.getElementById("send");
+
     send.addEventListener('click', () => {
         // ensure user and message fields are filled out
         if (user.value === "" && message.value === "") {
@@ -233,48 +234,50 @@ alertBanner.addEventListener('click', e => {
         alert(`Message successfully sent to: ${user.value}`);
         }
         });
+
+
 // Local Storage 
 
-const firstToggle = document.getElementById('email-not');
-const secondToggle =  document.getElementById('public-profile');
-const timezoneField = document.getElementById('timezone');
+    const firstToggle = document.getElementById('email-not');
+    const secondToggle =  document.getElementById('pub-pro');
+    const timezoneField = document.getElementById('timezone');
+    
+    // Test for local storage
 
-function testStorage() {
-    const test = 'test';
-    try {
-        localStorage.setItem(test, test);
-        localStorage.removeItem(test);
-        return true;
-    } catch(e) {
-        return false;
+    function testStorage() {
+        const test = 'test';
+        try {
+            localStorage.setItem(test, test);
+            localStorage.removeItem(test);
+            return true;
+        } catch(e) {
+            return false;
+        }
     }
-}
+
+    const saveBtn = document.getElementById('save');
+    const cancelBtn = document.getElementById('cancel');
+
+    if (testStorage() === true){
+
+        saveBtn.addEvenentListener('click', () => { 
+            localStorage.setItem('emailNot', firstToggle.checked);
+            localStorage.setItem('pubPro', secondToggle.checked);
+            localStorage.setItem('timeZone', timeZoneField.value);
+        });
+
+        cancelBtn.addEventListener('click', e => {
+
+            let cancel = confirm('Do you want to cancel?');
+    if (cancel) {
+            localStorage.setItem('emailNot', firstToggle.checked = null);
+            localStorage.setItem('pubPro', secondToggle.checked = null);
+            localStorage.setItem('timeZone', timeZoneField.value = null);
+        alert('The settings have been successfuly saved!');
+    }
+
+        });
+        
+    };
 
 
-
-
-
-
-
-
-
-// create a chart by adding a script 
-var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-
-    // The data for our dataset
-    data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
-        }]
-    },
-
-    // Configuration options go here
-    options: {}
-});
