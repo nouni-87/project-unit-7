@@ -23,7 +23,17 @@
         <div class="bell-icon-container">
             <img src="icons/icon-bell.svg" class="icon-bell" alt="SVG of bell icon"> <!--bell icon-->
             <div class="notification" id="notification-icon">
-                <ul class="notificationMessages"></ul>  
+                
+                <div class="dropdown">
+                    <button class="dropbtn">4</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="#YourApp">Victoria's on YourApp</a>
+                      <a href="#Facebook">Dawn's' on FB</a>
+                      <a href="#Twit">Dale likes YourApp</a>
+                      <a href="#Insta">Dan sent a msg</a>
+                    </div>
+                  </div>
+                
             </div>
          <div class="user-account">
         <img src="images/avatar.png" class="profile-img" alt="my profile photo"> 
@@ -210,7 +220,7 @@
                 </div>
     
                 <div class="activity-container">
-                    <img src="images/member-3.jpg" class="profile-image">
+                    <img src="images/member-2.jpg" class="profile-image">
                 <div class="activity-text">
                     <p>Dawn Wood commented onFacebook's Change for 2016</p>
                 </div>
@@ -222,7 +232,7 @@
                 <div class="activity-container">
                     <img src="images/member-3.jpg" class="profile-image">
                 <div class="activity-text">
-                    <p>Dawn Wood commented onFacebook's Change for 2016</p>
+                    <p>Dale Byrd likes the post Facebook's Change for 2016</p>
                 </div>
                     <p>5 hours ago</p>
                     <p><a href="#" class="fas-icon">&rtrif;</a></p>
@@ -246,9 +256,13 @@
              <section class="message">
                 <h3>MESSAGE USERS</h3>
                 <form class="widget-container">
-               
-                <input type="text" name="widget" id="userField" placeholder="Search for user" class="form-field">
-                
+                   <input type="text" name="widget" id="userField" placeholder="Search for user" class="form-field">
+                        <datalist id="members-name">
+                            <option>Victoria Chambers</option>
+                            <option>Dale Byrd</option>
+                            <option>Dawn Wood</option>
+                            <option>Dan Oliver</option>
+                        </datalist>
            
                 <textarea id="messageField" placeholder="Message for user" class="form-area"></textarea>
                 <button class="button-primary" id="send" >Send</button>

@@ -1,6 +1,7 @@
 const trafficCanvas = document.getElementById("traffic-chart");
 const alertBanner = document.getElementById("alert");
-const bellIcon = document.getElementById("notification-icon");
+const bellIcon = document.querySelector(".icon-bell");
+const notifications = document.getElementById("myDropdown");
 const dailyCanvas = document.getElementById("daily-chart");
 const mobileCanvas = document.getElementById("mobile-chart");
 
@@ -22,6 +23,33 @@ alertBanner.addEventListener('click', e => {
     }
 });
 
+
+// Maker to notify the user of new messages when clicks the button
+// bellIcon.addEventListener('click', () => {
+//     notifications.classList.toggle('hidden');
+// });
+
+function bellIconDrop() {
+    notifications.classList.toggle("show");
+  }
+  
+  //close the dropdown if a user click outside of the bell
+
+   window.onlick =function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      const dropdown = document.getElementsByClassName("dropdown-content");
+    
+      for (let i = 0; i < dropdown.length; i++) {
+        
+        if (dropdown[i].classList.contains('show')) {
+          dropdown[i].classList.remove('show');
+        }
+      }
+    }
+  }
+
+
+
 // traffic
  let chartButtons = document.getElementById('traffic-nav-btns');
  let trafficLinkNav = document.getElementsByClassName('traffic-nav-link');
@@ -30,7 +58,7 @@ alertBanner.addEventListener('click', e => {
 
  for (let i=0; i<trafficLinkNav; i++) {
     trafficLinkNav[i].addEvenentListener("click", (e) => {
-        let status = document.getElementsByClassName("active");
+        let status = document.getElementById("traffic-nav-btns");
         status[0].className = status[0].classname.replace("active", "");
         e.target.classlist.add("active");
     });
@@ -221,6 +249,8 @@ alertBanner.addEventListener('click', e => {
     const user = document.getElementById("userField");
     const message = document.getElementById("messageField");
     const send = document.getElementById("send");
+    const membersName = document.getElementById('members-name');
+    const form = document.querySelector('widget-container');
 
     send.addEventListener('click', () => {
         // ensure user and message fields are filled out
@@ -236,11 +266,33 @@ alertBanner.addEventListener('click', e => {
         });
 
 
+    user.addEventListener('keyup', function(e){
+        user.value = user.value.toUpperCase();
+
+        for (i = 0; i < membersName.length; i++) {
+            const searchField = membersName[i];
+            if (searchField.includes(user)) {
+                memebersName[i].style.display = '';
+            } else{
+                memebersName[i].style.display = 'none';
+            }
+        }
+    });
+        
+    
+        
+
+
+
+
+
+
+
 // Local Storage 
 
-    const firstToggle = document.getElementById('email-not');
-    const secondToggle =  document.getElementById('pub-pro');
-    const timezoneField = document.getElementById('timezone');
+    const emailNot = document.getElementById('email-not');
+    const pubPro =  document.getElementById('pub-pro');
+    const timeZone = document.getElementById('timezone');
     
     // Test for local storage
 
@@ -260,24 +312,32 @@ alertBanner.addEventListener('click', e => {
 
     if (testStorage() === true){
 
-        saveBtn.addEvenentListener('click', () => { 
-            localStorage.setItem('emailNot', firstToggle.checked);
-            localStorage.setItem('pubPro', secondToggle.checked);
-            localStorage.setItem('timeZone', timeZoneField.value);
+        saveBtn.addEventListener('click', () => { 
+            localStorage.setItem('emailNot', emailNot.checked);
+            localStorage.setItem('pubPro', pubPro.checked);
+            localStorage.setItem('timeZone', timeZone[timeZone.selectedIndex].value);
+            alert('The settings have been successfuly saved!');
         });
 
         cancelBtn.addEventListener('click', e => {
 
             let cancel = confirm('Do you want to cancel?');
     if (cancel) {
-            localStorage.setItem('emailNot', firstToggle.checked = null);
-            localStorage.setItem('pubPro', secondToggle.checked = null);
-            localStorage.setItem('timeZone', timeZoneField.value = null);
-        alert('The settings have been successfuly saved!');
+            localStorage.setItem('emailNot', emailNot.checked = null);
+            localStorage.setItem('pubPro', pubPro.checked = null);
+            localStorage.setItem('timeZone', timeZone[timeZone.selectedIndex].value = 'Select a Timezone');
+        
     }
 
         });
         
     };
 
+    // Loading the settings inside the localStorage to replace the predefined settings when the page is reloaded
+    // using the JSON.parse() method in order to convert a JSON string into a JavaScript object.
 
+    //JSON.parse(window.localStorage.getItem('user'));
+
+    emailNot.checked = JSON.parse(localStorage.getItem('emailNot'));
+    pubPro.checked = JSON.parse(localStorage.getItem('pubPro'));
+    timeZone.value = JSON.parse(localStorage.getItem('timeZone'));

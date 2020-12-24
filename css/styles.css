@@ -43,10 +43,29 @@
         color: #78377a;
     }
 
+    .dropbtn {
+        
+        cursor: pointer;
+        color: white;
+        border-radius: 50%;
+        background-color: red;
+      
+   
+    }
+    
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: green;
+      }
+
+      .dropdown a:hover {
+          background-color: purple
+      }
+
 /* Styling Bell icon and profile image */
     .icon-bell {
        cursor: pointer;
        width: 30px;
+       animation: ding 0.7s ease-out 0.2s forwards;
        
     }
 
@@ -244,6 +263,7 @@
         transition: transform 1s;
         transform: rotate(360deg);
         cursor: pointer;
+      
     }
        
 
