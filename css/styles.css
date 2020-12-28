@@ -44,28 +44,60 @@
     }
 
     .dropbtn {
-        
+        position: relative;
         cursor: pointer;
         color: white;
         border-radius: 50%;
         background-color: red;
-      
-   
+        padding: 5px 10px;
+        right: 15px;
+        top: -7px;
     }
     
     .dropbtn:hover, .dropbtn:focus {
         background-color: green;
+       /* animation: ding 0.7s ease-out 0.2s forwards;
+        animation-delay: 1s;
+     animation-duration: 0.3s; */
+    }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      .dropdown-content {
+        z-index: 100;
+        padding: 1em;
+        display: none;
+        font-weight: 600;
+        position: absolute;
       }
 
+      .dropdown-content a {
+          color: white;
+          display: block;
+          padding: 10px 15px;
+          border-radius: 30%;
+      }
+
+      .dropdown:hover .dropdown-content {
+        background: rgb(173, 106, 173);
+
+        display: block;
+       
+      }
+	
+
       .dropdown a:hover {
-          background-color: purple
+          background-color: turquoise;
+         
       }
 
 /* Styling Bell icon and profile image */
     .icon-bell {
        cursor: pointer;
        width: 30px;
-       animation: ding 0.7s ease-out 0.2s forwards;
+      
        
     }
 

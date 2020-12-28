@@ -24,29 +24,31 @@ alertBanner.addEventListener('click', e => {
 });
 
 
-// Maker to notify the user of new messages when clicks the button
-// bellIcon.addEventListener('click', () => {
-//     notifications.classList.toggle('hidden');
-// });
+//Maker to notify the user of new messages when clicks the button
+bellIcon.addEventListener('click', () => {
+    notifications.classList.toggle('show');
+});
 
-function bellIconDrop() {
-    notifications.classList.toggle("show");
-  }
+
   
   //close the dropdown if a user click outside of the bell
 
-   window.onlick =function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      const dropdown = document.getElementsByClassName("dropdown-content");
-    
-      for (let i = 0; i < dropdown.length; i++) {
-        
-        if (dropdown[i].classList.contains('show')) {
-          dropdown[i].classList.remove('show');
-        }
-      }
+   window.onlick = function(event) {
+    if (event.target === bellIcon) {
+      //const dropdown = document.getElementsByClassName("dropdown-content");
+      notifications.classList.toggle('show');
+    } else if (!notifications.classList.contains('hidden')) {
+        notifications.classList.add('hidden');
     }
-  }
+    
+    //   for (let i = 0; i < dropdown.length; i++) {
+        
+    //     if (dropdown[i].classList.contains('show')) {
+    //       dropdown[i].classList.remove('show');
+    //     }
+    //   }
+    
+  };
 
 
 
@@ -267,7 +269,7 @@ function bellIconDrop() {
 
 
     user.addEventListener('keyup', function(e){
-        user.value = user.value.toUpperCase();
+        user.value = user.value.toLowerCase();
 
         for (i = 0; i < membersName.length; i++) {
             const searchField = membersName[i];
@@ -280,14 +282,6 @@ function bellIconDrop() {
     });
         
     
-        
-
-
-
-
-
-
-
 // Local Storage 
 
     const emailNot = document.getElementById('email-not');
@@ -310,7 +304,7 @@ function bellIconDrop() {
     const saveBtn = document.getElementById('save');
     const cancelBtn = document.getElementById('cancel');
 
-    if (testStorage() === true){
+    if (testStorage() === true) {
 
         saveBtn.addEventListener('click', () => { 
             localStorage.setItem('emailNot', emailNot.checked);
@@ -325,10 +319,16 @@ function bellIconDrop() {
     if (cancel) {
             localStorage.setItem('emailNot', emailNot.checked = null);
             localStorage.setItem('pubPro', pubPro.checked = null);
-            localStorage.setItem('timeZone', timeZone[timeZone.selectedIndex].value = 'Select a Timezone');
+            localStorage.setItem('myTimeZoneSelectedValue', timezoneSelect.value = 'Select a Timezone');
         
     }
 
+        });
+
+        timezone.addEventListener('click', () => {
+            localStorage.setItem('myTimeZoneSelectedValue', 'east');
+            localStorage.setItem('myTimeZoneSelectedValue', 'pst');
+            localStorage.setItem('myTimeZoneSelectedValue', 'mst');
         });
         
     };
@@ -340,4 +340,4 @@ function bellIconDrop() {
 
     emailNot.checked = JSON.parse(localStorage.getItem('emailNot'));
     pubPro.checked = JSON.parse(localStorage.getItem('pubPro'));
-    timeZone.value = JSON.parse(localStorage.getItem('timeZone'));
+    document.querySelector('#timezone').value = localStorage.getItem('myTimeZoneSelectedValue');
