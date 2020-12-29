@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Hanane's App Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" 
         integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" 
         crossorigin="anonymous" />
@@ -27,10 +29,11 @@
                 <div class="dropdown">
                     <button class="dropbtn">4</button>
                     <div id="myDropdown" class="dropdown-content  hidden show">
+                      <a href="#messages">Dan sent a msg</a>
                       <a href="#YourApp">Victoria's on YourApp</a>
                       <a href="#newMem">Dawn's' on FB</a>
                       <a href="#recent-activity">Dale likes YourApp</a>
-                      <a href="#messages">Dan sent a msg</a>
+
                     </div>
                   </div>
                 
@@ -255,14 +258,10 @@
           <div class="desktop-view">
              <section class="message">
                 <h3 id="messages">MESSAGE USERS</h3>
-                <form class="widget-container">
-                   <input type="text" name="widget" id="userField" placeholder="Search for user" class="form-field">
-                        <datalist id="members-name">
-                            <option>Victoria Chambers</option>
-                            <option>Dale Byrd</option>
-                            <option>Dawn Wood</option>
-                            <option>Dan Oliver</option>
-                        </datalist>
+                <form autocomplete="off" class="widget-container">
+                <div class="autocomplete">
+                   <input id="userField" type="text" name="widget" placeholder="Search for user" class="form-field">
+                </div>
            
                 <textarea id="messageField" placeholder="Message for user" class="form-area"></textarea>
                 <button class="button-primary" id="send" >Send</button>

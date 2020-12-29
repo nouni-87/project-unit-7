@@ -27,6 +27,7 @@
         padding: 0px 5px;
         color: #fff;
         background-color: #78377a;
+        font-family: 'Lato', sans-serif;
     } 
 
     .header-container{
@@ -40,6 +41,7 @@
     }
     a {
         text-decoration: none;
+        font-family: 'Lato', sans-serif;
         color: #78377a;
     }
 
@@ -123,6 +125,7 @@
         display: flex;
         justify-content: space-evenly;
         background-color: blueviolet;
+      
     }
 
     .nav-imgIcon {
@@ -139,6 +142,7 @@
         color: #fff;
         margin: 10px;
         border-radius: 5px;
+        font-family: 'Lato', sans-serif;
     }
 
   
@@ -211,12 +215,14 @@
         z-index: 10;
         padding: 20px;
         color: rgb(173, 106, 173);
+        font-family: 'Lato', sans-serif;
 
     }
 
     .media-stats {
         padding: 10px 65px 0 20px;
         color: rgb(173, 106, 173);
+        font-family: 'Lato', sans-serif;
     }
 
     .traffic-nav {
@@ -231,7 +237,7 @@
         transition: background-color .2s ease-in-out, color .2s ease-in-out;
         margin-right: 15px;
         margin-left: 15px;
-        
+        font-family: 'Lato', sans-serif;
         }
 
     .traffic-nav-link:hover {
@@ -324,10 +330,12 @@
        padding-bottom: 20px;
        gap: 15px;
        border-bottom: 1px solid rgb(27, 26, 26);
-      
-       
-   }
-   
+     }
+    
+    .activity-text {
+        font-family: 'Lato', sans-serif;
+    }
+
    .profile-image {
         width: 60px;
         border-radius: 50%;
@@ -340,8 +348,7 @@
     }
    
 
-    form,
-    .setting-widjet {
+    form {
         width: 100%;
         padding: 0 1em;
         margin: 0 auto;
@@ -349,17 +356,21 @@
         flex-direction: column;
         border-bottom: 1px solid rgb(27, 26, 26);
     }
-    
-    
 
+    .widjet-container {
+        position: relative;
+        display: inline-block;
+    }
 
     input[type=text] {
+        width: 100%;
         background-color: #e8eeef;
         border: none;
         border-radius: .10em;
         height:50px;
         margin-top: 10px;
         margin-bottom: 10px;
+        font-family: 'Lato', sans-serif;
     }
 
     textarea {
@@ -369,6 +380,7 @@
         height: 100px;
         margin-top: 10px;
         margin-bottom: 10px;
+        font-family: 'Lato', sans-serif;
     }
 
     .button-primary,
@@ -399,7 +411,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 15px;
-       
+        font-family: 'Lato', sans-serif;
     }
 
     .settings-button {
