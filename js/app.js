@@ -24,7 +24,7 @@ alertBanner.addEventListener('click', e => {
 });
 
 
-//Maker to notify the user of new messages when clicks the button
+//Marker to notify the user of new messages when clicks the button
 bellIcon.addEventListener('click', () => {
     notifications.classList.toggle('show');
 });
@@ -284,9 +284,9 @@ bellIcon.addEventListener('click', () => {
     const members = [
         "Victoria Chambers",
         "Dale Byrd",
-        "Mc Wood",
-        "Jhon Oliver",
-        "Julio Rodreguez"
+        "Dan Wood",
+        "Dawn Oliver",
+        
     ];
 
     function autocomplete(inp, arr) {
