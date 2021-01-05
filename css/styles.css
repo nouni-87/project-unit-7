@@ -99,10 +99,13 @@
     .icon-bell {
        cursor: pointer;
        width: 30px;
-       animation: ding 0.7s ease-out 0.2s forwards;
-       animation-delay: 1s;
-       animation-duration: 0.3s; 
+       
+    }
 
+    .icon-bell:hover {
+        animation: ding 0.7s ease-out 0.2s forwards;
+        animation-delay: 1s;
+        animation-duration: 0.3s;
     }
 
     .bell-icon-container {

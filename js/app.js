@@ -25,11 +25,10 @@ alertBanner.addEventListener('click', e => {
 
 
 //Marker to notify the user of new messages when clicks the button
+
 bellIcon.addEventListener('click', () => {
-    notifications.classList.toggle('show');
+    notifications.style.display = "block";
 });
-
-
   
   //close the dropdown if a user click outside of the bell
 
