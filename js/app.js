@@ -32,23 +32,14 @@ bellIcon.addEventListener('click', () => {
   
   //close the dropdown if a user click outside of the bell
 
-   window.onlick = function(event) {
-    if (event.target === bellIcon) {
-      //const dropdown = document.getElementsByClassName("dropdown-content");
-      notifications.classList.toggle('show');
-    } else if (!notifications.classList.contains('hidden')) {
-        notifications.classList.add('hidden');
-    }
-    
-    //   for (let i = 0; i < dropdown.length; i++) {
-        
-    //     if (dropdown[i].classList.contains('show')) {
-    //       dropdown[i].classList.remove('show');
-    //     }
-    //   }
-    
-  };
 
+  window.addEventListener('click', event => {
+    if (event.target === bellIcon) {
+      notifications.style.display = "block";
+    } else {
+      notifications.style.display = "none";
+    }
+  });
 
 
 // traffic
